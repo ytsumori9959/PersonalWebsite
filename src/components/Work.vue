@@ -18,15 +18,11 @@
               <v-spacer></v-spacer>
 
               <v-btn icon>
-                <v-icon>mdi-heart</v-icon>
+                <v-icon>{{linkPath}}</v-icon>
               </v-btn>
 
               <v-btn icon>
-                <v-icon>mdi-bookmark</v-icon>
-              </v-btn>
-
-              <v-btn icon>
-                <v-icon>mdi-share-variant</v-icon>
+                <v-icon>{{githubPath}}</v-icon>
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -37,6 +33,8 @@
 </template>
 
 <script>
+import { mdiLink, mdiGithubCircle } from "@mdi/js";
+
 export default {
   name: "About",
 
@@ -47,21 +45,29 @@ export default {
       {
         title: "HOMEPAGE",
         src: "https://cdn.vuetifyjs.com/images/cards/house.jpg",
-        flex: 4
+        flex: 6
       },
       {
         title: "SPREAD SHEET",
         src:
           "https://aquaticinformatics.com/wp-content/uploads/2017/06/Excel-Spreadsheet.png",
-        flex: 4
+        flex: 6
       },
       {
         title: "SUDOKU SOLVER",
         src:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Sudoku_Puzzle_by_L2G-20050714_standardized_layout.svg/1200px-Sudoku_Puzzle_by_L2G-20050714_standardized_layout.svg.png",
-        flex: 4
+        flex: 6
+      },
+      {
+        title: "EDU TANK",
+        src:
+          "https://www.warhistoryonline.com/wp-content/uploads/2019/07/img_1.jpg",
+        flex: 6
       }
-    ]
+    ],
+    githubPath: mdiGithubCircle,
+    linkPath: mdiLink
   })
 };
 </script>

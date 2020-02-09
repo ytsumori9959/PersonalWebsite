@@ -3,7 +3,16 @@
     <v-spacer />
     <v-toolbar-title>Yuta Tsumori</v-toolbar-title>
     <v-spacer />
-    <v-app-bar-nav-icon />
+    <v-menu transition="slide-y-transition" bottom>
+      <template v-slot:activator="{ on }">
+        <v-app-bar-nav-icon v-on="on" />
+      </template>
+      <v-list>
+        <v-list-item v-for="(item, i) in items" :key="i">
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
   </v-app-bar>
 </template>
 
@@ -14,7 +23,7 @@ export default {
   components: {},
 
   data: () => ({
-    //
+    items: [{ title: "About" }, { title: "Work" }]
   })
 };
 </script>

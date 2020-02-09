@@ -3,21 +3,27 @@
     <FixedHeader />
 
     <v-content>
-      <HelloWorld />
+      <About />
+      <Work />
     </v-content>
+    <Footer />
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
 import FixedHeader from "./components/FixedHeader";
+import About from "./components/About";
+import Footer from "./components/Footer";
+import Work from "./components/Work";
 
 export default {
   name: "App",
 
   components: {
-    HelloWorld,
-    FixedHeader
+    FixedHeader,
+    About,
+    Footer,
+    Work
   },
 
   data: () => ({

@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar dense absolute>
+  <v-app-bar dense absolute color="primary">
     <v-spacer />
     <v-toolbar-title>Yuta Tsumori</v-toolbar-title>
     <v-spacer />

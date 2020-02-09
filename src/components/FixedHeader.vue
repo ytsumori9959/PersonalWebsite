@@ -1,9 +1,8 @@
 <template>
-  <v-app-bar dense absolute color="primary">
+  <v-app-bar app flat absolute color="primary">
+    <v-toolbar-title class="white--text text-center font-weight-thin">Yuta Tsumori</v-toolbar-title>
     <v-spacer />
-    <v-toolbar-title>Yuta Tsumori</v-toolbar-title>
-    <v-spacer />
-    <v-menu transition="slide-y-transition" bottom>
+    <v-menu transition="slide-y-transition">
       <template v-slot:activator="{ on }">
         <v-app-bar-nav-icon v-on="on" />
       </template>

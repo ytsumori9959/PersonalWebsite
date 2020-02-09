@@ -2,9 +2,9 @@
   <v-app>
     <FixedHeader />
 
-    <v-content>
-      <About />
-      <Work />
+    <v-content class="teal lighten-4">
+      <About class="mx-5 my-2" />
+      <Work class="mx-5 my-2" />
     </v-content>
     <Footer />
   </v-app>

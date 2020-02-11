@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="display-3 text-sm-left font-weight-black">WORK</p>
+    <p class="headline text-sm-left font-weight-bold red--text">WORK</p>
     <v-container fluid>
       <v-row dense>
         <v-col v-for="card in cards" :key="card.title" :cols="card.flex">

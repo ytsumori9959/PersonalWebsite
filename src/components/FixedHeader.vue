@@ -1,13 +1,13 @@
 <template>
-  <v-app-bar app dense color="primary">
-    <v-toolbar-title class="white--text text-center font-weight-thin">Yuta Tsumori</v-toolbar-title>
+  <v-app-bar app dense class="light-blue lighten-1">
+    <v-toolbar-title class="white--text text-center">Yuta Tsumori's Portfolio</v-toolbar-title>
     <v-spacer />
-    <v-menu transition="slide-y-transition">
+    <v-menu offset-y close-on-click close-on-content-click>
       <template v-slot:activator="{ on }">
         <v-app-bar-nav-icon v-on="on" />
       </template>
       <v-list>
-        <v-list-item v-for="(item, i) in items" :key="i">
+        <v-list-item v-for="(item, i) in items" :key="i" @click="isActive">
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
@@ -22,7 +22,8 @@ export default {
   components: {},
 
   data: () => ({
-    items: [{ title: "About" }, { title: "Work" }]
+    items: [{ title: "About" }, { title: "Work" }],
+    isActive: false
   })
 };
 </script>

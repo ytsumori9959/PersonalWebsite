@@ -1,5 +1,5 @@
 <template>
-  <v-footer padless color="primary lighten-1">
+  <v-footer padless color="light-blue lighten-3">
     <v-row justify="center" no-gutters>
       <v-btn icon>
         <v-icon>{{githubPath}}</v-icon>
@@ -11,7 +11,7 @@
         <v-icon>{{instagramPath}}</v-icon>
       </v-btn>
 
-      <v-col class="primary lighten-2 py-4 text-center white--text" cols="12">
+      <v-col class="light-blue lighten-2 py-4 text-center white--text" cols="12">
         {{ new Date().getFullYear() }} —
         <strong>Yuta Tsumori</strong>
       </v-col>

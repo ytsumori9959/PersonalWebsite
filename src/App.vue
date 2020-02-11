@@ -3,7 +3,7 @@
     <FixedHeader />
 
     <v-content>
-      <About class="mx-5 my-2" />
+      <About />
       <Work class="mx-5 my-2" />
     </v-content>
     <Footer />

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="scrolling-techniques">
     <p class="display-3 text-sm-left font-weight-black">ABOUT</p>
     <p class="text-sm-left">
       I'm currently a studying computer science at the University of Utah.

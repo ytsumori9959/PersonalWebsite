@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app flat absolute color="primary">
+  <v-app-bar app dense color="primary">
     <v-toolbar-title class="white--text text-center font-weight-thin">Yuta Tsumori</v-toolbar-title>
     <v-spacer />
     <v-menu transition="slide-y-transition">

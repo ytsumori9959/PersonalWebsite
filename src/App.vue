@@ -4,7 +4,7 @@
 
     <v-content>
       <About />
-      <Work class="mx-5 my-2" />
+      <Work />
     </v-content>
     <Footer />
   </v-app>
@@ -18,7 +18,9 @@ import Work from "./components/Work";
 
 export default {
   name: "App",
-
+  title() {
+    return "Yuta Tsumori's Portfolio";
+  },
   components: {
     FixedHeader,
     About,

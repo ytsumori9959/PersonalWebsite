@@ -5,6 +5,6 @@ Vue.use(Vuetify);
 
 export default new Vuetify({
     icons: {
-        iconfont: 'mdi' || 'mdiFacebook' || 'mdiGithubCircle' || 'mdiInstagram' || 'mdiLink' || 'mdiTranslate',
+        iconfont: 'mdi' || 'mdiFacebook' || 'mdiGithubCircle' || 'mdiInstagram' || 'mdiTranslate' || 'mdiCodeTags' || "mdiLaunch",
     },
 });

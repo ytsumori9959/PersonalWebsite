@@ -1,8 +1,8 @@
 <template>
-  <v-app-bar app dense class="light-blue lighten-1">
+  <v-app-bar app class="light-blue lighten-1">
     <v-toolbar-title class="white--text text-center">Yuta Tsumori's Portfolio</v-toolbar-title>
     <v-spacer />
-    <v-menu offset-y close-on-click close-on-content-click>
+    <v-menu offset-y close-on-click>
       <template v-slot:activator="{ on }">
         <v-btn icon v-on="on">
           <v-icon>{{translatePath}}</v-icon>
@@ -14,7 +14,7 @@
         </v-list-item>
       </v-list>
     </v-menu>
-    <v-menu offset-y close-on-click close-on-content-click>
+    <v-menu offset-y close-on-click>
       <template v-slot:activator="{ on }">
         <v-app-bar-nav-icon v-on="on" />
       </template>

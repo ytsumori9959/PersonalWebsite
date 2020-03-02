@@ -55,7 +55,8 @@ export default {
       {
         title: "HOMEPAGE",
         src: "https://cdn.vuetifyjs.com/images/cards/house.jpg",
-        codeLink: "",
+        launchLink: "https://yutatsumori.com/",
+        codeLink: "https://github.com/ytsumori9959/PersonalWebsite.git",
         description: "This is HOMEPAGE description"
       },
       {

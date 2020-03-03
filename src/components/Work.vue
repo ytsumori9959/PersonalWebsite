@@ -4,34 +4,26 @@
     <v-container fluid fill-height>
       <v-row justify="center">
         <v-col v-for="card in cards" :key="card.title">
-          <v-card max-width="300px">
-            <v-img
-              :src="card.src"
-              class="white--text align-end"
-              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-              height="200px"
-            >
-              <v-card-title v-text="card.title"></v-card-title>
-            </v-img>
+          <v-card max-width="500px" min-width="300px">
+            <v-card-title v-text="card.title"></v-card-title>
+            <v-card-text v-text="card.description"></v-card-text>
+            <v-card-subtitle class="mt-n4">・目的、役割</v-card-subtitle>
+            <v-card-text class="mt-n4" v-text="card.purpose"></v-card-text>
+            <v-card-subtitle class="mt-n4">・主なスキル</v-card-subtitle>
+            <v-card-text class="mt-n4" v-text="card.skills"></v-card-text>
+            <v-card-subtitle
+              class="mt-n4"
+              v-if="card.isCodePrivate"
+            >※大学授業内での制作物のため、ソースコードの公開は行っていません</v-card-subtitle>
 
-            <v-card-actions>
-              <v-dialog v-model="dialog" max-width="300">
-                <template v-slot:activator="{ on }">
-                  <v-btn depressed round v-on="on">Learn More</v-btn>
-                </template>
-                <v-card>
-                  <v-card-title v-text="card.title" />
-                  <v-card-text v-text="card.description" />
-                </v-card>
-              </v-dialog>
+            <v-card-actions class="mt-n5">
+              <v-spacer />
 
-              <v-spacer></v-spacer>
-
-              <v-btn icon>
+              <v-btn icon :href="card.launchLink" target="_blank">
                 <v-icon>{{launchPath}}</v-icon>
               </v-btn>
 
-              <v-btn icon>
+              <v-btn icon :href="card.codeLink" target="_blank">
                 <v-icon>{{codeTagPath}}</v-icon>
               </v-btn>
             </v-card-actions>
@@ -53,32 +45,46 @@ export default {
   data: () => ({
     cards: [
       {
-        title: "HOMEPAGE",
-        src: "https://cdn.vuetifyjs.com/images/cards/house.jpg",
+        title: "Portfolio Website",
         launchLink: "https://yutatsumori.com/",
         codeLink: "https://github.com/ytsumori9959/PersonalWebsite.git",
-        description: "This is HOMEPAGE description"
+        description:
+          "自身のスキルや今までに作成してきたアプリケーションを紹介するためのポートフォリオウェブサイト",
+        purpose: "vue.jsを利用した簡単なウェブサイト開発",
+        skills: "vue.js, vuetify.js",
+        isCodePrivate: false
       },
       {
-        title: "SPREAD SHEET",
-        src:
-          "https://aquaticinformatics.com/wp-content/uploads/2017/06/Excel-Spreadsheet.png",
+        title: "Ataenakier",
+        launchLink: "https://ataenakier.firebaseapp.com/",
         codeLink: "",
-        description: "This is SPREAD SHEET description"
+        description:
+          "Akinatorを対人で遊べるようにと、趣味で制作したwebアプリケーション",
+        purpose: "nuxt.jsとfirebaseを利用したwebアプリケーション開発",
+        skills: "nuxt.js, firebase",
+        isCodePrivate: false
       },
       {
-        title: "SUDOKU SOLVER",
-        src:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Sudoku_Puzzle_by_L2G-20050714_standardized_layout.svg/1200px-Sudoku_Puzzle_by_L2G-20050714_standardized_layout.svg.png",
+        title: "Educational App",
+        launchLink: "",
         codeLink: "",
-        description: "This is SUDOKU SOLVER description"
+        description:
+          "Qtを利用してグループ制作した教育用デスクトップアプリケーション",
+        purpose:
+          "gitのバージョン管理を利用したグループプロジェクト(6名)開発　Qtを利用したUIの作成　外部ライブラリ(Box2D)を利用した物理演算",
+        skills: "C++, git, Qt",
+        isCodePrivate: true
       },
       {
-        title: "EDU TANK",
-        src:
-          "https://www.warhistoryonline.com/wp-content/uploads/2019/07/img_1.jpg",
+        title: "SpreadSheet",
+        launchLink: "",
         codeLink: "",
-        description: "This is EDU TANK description"
+        description:
+          "Qtを利用してグループ制作した学習用デスクトップアプリケーション",
+        purpose:
+          "gitのバージョン管理を利用したペアプロジェクト開発　MVCのデザインパターンを利用したアプリケーション開発　",
+        skills: "C#, git, Visual Studio",
+        isCodePrivate: true
       }
     ],
     codeTagPath: mdiCodeTags,

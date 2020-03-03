@@ -1,10 +1,10 @@
 <template>
   <div class="ml-3 mt-5">
-    <p class="headline text-sm-left font-weight-bold red--text">WORK</p>
+    <p class="headline text-sm-left font-weight-bold">WORK</p>
     <v-container fluid fill-height>
       <v-row justify="center">
         <v-col v-for="card in cards" :key="card.title">
-          <v-card max-width="500px" min-width="300px">
+          <v-card max-width="500px" min-width="300px" class="grey lighten-1">
             <v-card-title v-text="card.title"></v-card-title>
             <v-card-text v-text="card.description"></v-card-text>
             <v-card-subtitle class="mt-n4">・目的、役割</v-card-subtitle>

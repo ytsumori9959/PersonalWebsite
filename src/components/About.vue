@@ -1,9 +1,8 @@
 <template>
   <div class="ml-3 mt-5 mr-8">
-    <p class="headline text-sm-left font-weight-bold red--text">ABOUT</p>
+    <p class="headline text-sm-left font-weight-bold">ABOUT</p>
     <p class="text-sm-left pl-3 mt-n2">
-      <strong>【プロフィール】</strong>
-      <br />名前：津守 勇汰（つもり ゆうた）
+      津守 勇汰（つもり ゆうた）
       <br />
       <br />2012年、中学1年生の頃に親の転勤でアメリカ合衆国、カリフォルニア州サンノゼに移住。現地の中学校を卒業後、高校での選択科目にプログラミング授業を選択しプログラミングに興味を持つ。2017年に現地の高校(Lynbrook High School)を卒業。現在、ユタ州ソルトレイクシティのユタ大学(The University of Utah)コンピュータサイエンス学科に在学。
       <br />

@@ -2,7 +2,7 @@
   <v-app>
     <FixedHeader />
 
-    <v-content>
+    <v-content class="grey lighten-2">
       <About />
       <Work />
     </v-content>
